@@ -17,7 +17,7 @@ class ToDoList extends Component {
  }
 
  createTasks(item) {
-   return <li onClick={this.handleClick.bind(this)}  className=" lists list-group-item list-group-item-action list-group-item-info">{item} <button type="button" onClick={this.removeList.bind(this)} className="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li>
+   return <li onClick={this.handleClick.bind(this)}  className=" lists list-group-item list-group-item-action list-group-item-info">{item.title} <button type="button" onClick={this.removeList.bind(this)} className="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li>
  }
 
  render() {
