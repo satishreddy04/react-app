@@ -9,10 +9,21 @@ class ToDoApp extends Component {
         this.state ={
             data:[]
         }
+        
     }
     addTodo(val){
         this.state.data.push(val);
         this.setState({data: this.state.data});
+    }
+    removeTodoList(list){
+        var s= list.trim();
+        var array= this.state.data;
+        var arrayIndex= array.indexOf(s);
+
+        if(arrayIndex>-1){
+        array.splice(arrayIndex,1);
+        }
+        this.setState({data:array});
     }
   render() {
     return (
@@ -22,7 +33,7 @@ class ToDoApp extends Component {
         </div>
         <div className="todInput">
             <ToDoInput  addTodo={this.addTodo.bind(this)}/>
-            <ToDoList listdata= {this.state.data} />
+            <ToDoList listdata= {this.state.data} removeTodoList={this.removeTodoList.bind(this)} />
             </div>
 
 

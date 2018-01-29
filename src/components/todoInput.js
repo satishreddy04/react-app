@@ -11,10 +11,13 @@ class ToDoInput extends Component {
 }
 addkodo (e) {
     let value = this.state.value;
+    if(value!=''){
    //this. props.addtodo = this.state.value;
  // alert(value);
     this.props.addTodo(value);
    // alert(this.state.value)
+   this.state.value="";
+    }
    
 
 }
