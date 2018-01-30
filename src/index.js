@@ -16,9 +16,15 @@ import {
     Link
   } from 'react-router-dom'
   
+import {createStore} from 'redux';
+import BookApp from './reducers/bookReducer';
+import provider from 'react-redux';
+let store= createStore(BookApp)
+console.log(store.getState());
 
-
-ReactDOM.render(<Router>
+ReactDOM.render(
+<provider store= {store}>
+<Router>
     <div>
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -47,5 +53,6 @@ ReactDOM.render(<Router>
     </div>
     </div>
    
-  </Router>, document.getElementById('root'));
+  </Router>
+  </provider>, document.getElementById('root'));
 registerServiceWorker();

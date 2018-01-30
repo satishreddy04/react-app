@@ -47,3 +47,12 @@ background-color: #DEEADE;
 .close{
   font-size:16px;
 }
+.books-container {
+  display: flex;
+  flex-direction: "row";
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100vh;
+}
