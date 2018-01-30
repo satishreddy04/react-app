@@ -6,6 +6,7 @@ import './index.css';
 import App from './App';
 import Home from'./components/home';
 import ToDoApp from'./components/todoApplication';
+import ReduxExample from './components/reduxexample'
 import { NavLink } from 'react-router-dom'
 
 import registerServiceWorker from './registerServiceWorker';
@@ -27,6 +28,8 @@ ReactDOM.render(<Router>
       <ul class="nav navbar-nav">
         <li class="active"><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/todoapp">Todo Application</NavLink></li>
+        <li><NavLink to="/redux">Redux Example</NavLink></li>
+        
         
       </ul>
     </div>
@@ -34,6 +37,7 @@ ReactDOM.render(<Router>
 
       <Route exact path="/" component={Home}/>
       <Route path="/todoapp" component={ToDoApp}/>
+      <Route path="/redux" component={ReduxExample}/>
       <div clasName="footer" id ="footer">
     <footer>
       
