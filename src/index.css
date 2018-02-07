@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #footer{
   background-color: #6E6969;
@@ -55,4 +57,65 @@ background-color: #DEEADE;
   -webkit-justify-content: center;
   justify-content: center;
   height: 100vh;
+}
+
+
+.page-header{
+  text-align: center;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: gray;
+  font-style: italic;
+}
+
+.cInbox{
+  background-color: #CBC3C3;
+  border-right:1px solid #9999a3;
+  margin: 0px;
+  padding: 0px;
+  max-height: 870px;
+  min-height:auto;
+  overflow-x: scroll; 
+
+}
+.cDetail{
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  min-height: auto;
+  min-width: auto;
+}
+/* .inboxList{
+max-height: 800px;
+overflow-y: scroll;
+overflow-x: hidden;
+font-size: 15px;
+-webkit-transition: height 0.7s ease-out;
+-moz-transition: height 0.7s ease-out;
+transition: height 0.7s ease-out;
+} */
+.inobxitemList{
+  flex: 0 0 auto;
+  cursor: pointer;
+  border-bottom:1 px solid #151516;
+  padding: 15px 10px 15px 8px;
+  list-style-type: none;
+
+}
+.mainList{
+  list-style: none;
+  padding: 0px;
+  margin:0px;
+}
+.lists{
+ 
+}
+.listDiv{
+  border-bottom: 1px solid #676161;
+  margin-left: 4px;
+  /* padding: 17px 13px 21px 21px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+
 }

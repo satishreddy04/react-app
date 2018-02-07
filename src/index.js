@@ -8,6 +8,7 @@ import Home from'./components/home';
 import ToDoApp from'./components/todoApplication';
 import ReduxExample from './components/reduxexample'
 import { NavLink } from 'react-router-dom'
+import CryptoApp from './components/cryptoapp'
 
 import registerServiceWorker from './registerServiceWorker';
 import {
@@ -35,6 +36,7 @@ ReactDOM.render(
         <li class="active"><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/todoapp">Todo Application</NavLink></li>
         <li><NavLink to="/redux">Redux Example</NavLink></li>
+        <li><NavLink to="/crypto">CrytpCurrencies</NavLink></li>
         
         
       </ul>
@@ -44,6 +46,7 @@ ReactDOM.render(
       <Route exact path="/" component={Home}/>
       <Route path="/todoapp" component={ToDoApp}/>
       <Route path="/redux" component={ReduxExample}/>
+      <Route path="/crypto" component={CryptoApp}/>
       <div clasName="footer" id ="footer">
     <footer>
       
