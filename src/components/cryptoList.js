@@ -7,6 +7,7 @@ class CryptoList extends Component {
      
       }
       handleClick(e){
+
           const selVal= e.target.getAttribute('data-key');
           this.props.selectedVlauefromInbox(selVal);
       }
@@ -15,7 +16,7 @@ class CryptoList extends Component {
       var data= this.props.cryptoList;
     var listItems= data.map(function(data){
         return (
-        <li class="lists" key={data.id} data-key={data.id} >
+        <li class="lists"  key={data.id} data-key={data.id} >
         <div data-key={data.id} className="listDiv">   
         {data.name} <span>({data.symbol})</span>
         </div>

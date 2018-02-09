@@ -7,8 +7,10 @@ class CryptoDetail extends Component {
       let cryptoDetailsData=this.props.initialDetialsData;
    console.log(cryptoDetailsData);
     return (
-        <div>
-        <h1>{cryptoDetailsData.name}</h1>
+        <div class="mainDetailsPage">
+            <div id="mainHead">
+        <span>{cryptoDetailsData.name}</span>
+        </div>
           
         </div>
     );
