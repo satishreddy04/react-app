@@ -145,4 +145,33 @@ transition: height 0.7s ease-out;
 }
 .mainDetailsPage{
 }
+.embed-responsive-item{
+  width:100%;
+  min-height: 500px;
+}
 
+/* .embed-responsive-16by9{
+  height:800px;
+} */
+.video-detail{
+  position: relative;
+}
+.details{
+  position: absolute;
+  top:500px;
+  
+}
+.search-bar{
+  margin: 20px;
+  text-align:center;
+}
+.search-bar input{
+  width: 75%;
+}
+
+.list-group-items{
+  cursor: pointer;
+}
+.list-group-items:hover{
+  background-color: #DBCBCB;
+}

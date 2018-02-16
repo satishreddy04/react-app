@@ -9,6 +9,7 @@ import ToDoApp from'./components/todoApplication';
 import ReduxExample from './components/reduxexample'
 import { NavLink } from 'react-router-dom'
 import CryptoApp from './components/cryptoapp'
+import youtubeApp from './components/youtubeApp/youtubeApp'
 
 import registerServiceWorker from './registerServiceWorker';
 import {
@@ -22,6 +23,8 @@ import BookApp from './reducers/bookReducer';
 import provider from 'react-redux';
 let store= createStore(BookApp)
 console.log(store.getState());
+
+const API_KEY= 'AIzaSyA-dRMhREAg-LwhwBh5yt7t2s987szpiLI';
 
 ReactDOM.render(
 <provider store= {store}>
@@ -37,6 +40,7 @@ ReactDOM.render(
         <li><NavLink to="/todoapp">Todo Application</NavLink></li>
         <li><NavLink to="/redux">Redux Example</NavLink></li>
         <li><NavLink to="/crypto">CrytpCurrencies</NavLink></li>
+        <li><NavLink to="/youtube">Youtube App</NavLink></li>
         
         
       </ul>
@@ -47,6 +51,7 @@ ReactDOM.render(
       <Route path="/todoapp" component={ToDoApp}/>
       <Route path="/redux" component={ReduxExample}/>
       <Route path="/crypto" component={CryptoApp}/>
+      <Route path="/youtube" component={youtubeApp}/>
       <div clasName="footer" id ="footer">
     <footer>
       
