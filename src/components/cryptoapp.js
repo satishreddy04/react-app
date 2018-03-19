@@ -22,6 +22,7 @@ class CryptoApp extends Component {
         
     }
     clickedValue(data){
+      console.log('clicked value',data);
         let obj= this.state.initialData.find(function(obj){
             return obj.id=== data
         })

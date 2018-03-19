@@ -9,6 +9,7 @@ class CryptoList extends Component {
       handleClick(e){
 
           const selVal= e.target.getAttribute('data-key');
+          alert(selVal);
           this.props.selectedVlauefromInbox(selVal);
       }
   render() {

@@ -11,6 +11,7 @@ class CryptoInbox extends Component {
       }
 
   render() {
+      console.log(this.props.inboxData);
       let cryptoData= this.props.inboxData;
     return (
         <div>

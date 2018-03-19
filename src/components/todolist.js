@@ -12,10 +12,10 @@ class ToDoList extends Component {
      this.props.removeTodoList(listRemoveName);
      
  }
+
  handleClick(e){
      console.log(e.target.value);
  }
-
  createTasks(item) {
    return <li onClick={this.handleClick.bind(this)}  className=" lists list-group-item list-group-item-action list-group-item-info">{item.title} <button type="button" onClick={this.removeList.bind(this)} className="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li>
  }

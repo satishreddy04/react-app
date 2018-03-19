@@ -8,26 +8,31 @@ import Home from'./components/home';
 import ToDoApp from'./components/todoApplication';
 import ReduxExample from './components/reduxexample'
 import { NavLink } from 'react-router-dom'
-import CryptoApp from './components/cryptoapp'
+//import CryptoApp from './components/cryptoapp'
+import CryptoApp from './containers/crypto-app';
 import youtubeApp from './components/youtubeApp/youtubeApp'
-
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import ReduxPromise from 'redux-promise'
 import {
     BrowserRouter as Router,
     Route,
     Link
   } from 'react-router-dom'
   
-import {createStore} from 'redux';
+import {createStore,applyMiddleware} from 'redux';
 import BookApp from './reducers/bookReducer';
-import provider from 'react-redux';
+// import provider from 'react-redux';
+import reducers from './reducers';
+
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 let store= createStore(BookApp)
 console.log(store.getState());
 
 const API_KEY= 'AIzaSyA-dRMhREAg-LwhwBh5yt7t2s987szpiLI';
 
 ReactDOM.render(
-<provider store= {store}>
+<Provider store={createStoreWithMiddleware(reducers)}>
 <Router>
     <div>
     <nav class="navbar navbar-inverse">
@@ -41,6 +46,7 @@ ReactDOM.render(
         <li><NavLink to="/redux">Redux Example</NavLink></li>
         <li><NavLink to="/crypto">CrytpCurrencies</NavLink></li>
         <li><NavLink to="/youtube">Youtube App</NavLink></li>
+        {/* <li><NavLink to="/reduxApp">Redux App</NavLink></li> */}
         
         
       </ul>
@@ -52,6 +58,7 @@ ReactDOM.render(
       <Route path="/redux" component={ReduxExample}/>
       <Route path="/crypto" component={CryptoApp}/>
       <Route path="/youtube" component={youtubeApp}/>
+      {/* <Route path="/reduxApp" component={ReduxApp}/> */}
       <div clasName="footer" id ="footer">
     <footer>
       
@@ -62,5 +69,5 @@ ReactDOM.render(
     </div>
    
   </Router>
-  </provider>, document.getElementById('root'));
+  </Provider>, document.getElementById('root'));
 registerServiceWorker();

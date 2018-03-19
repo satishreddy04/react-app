@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class BookCard extends Component {
   render() {
     return (
-        <div>
+        <div className="books-container" >
           <h2>BookCard  sample</h2>
           <img style={{width: 250, height: 323}} src={this.props.stateProps.cover} />
         <h2>{this.props.stateProps.title}</h2>
