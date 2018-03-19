@@ -11,7 +11,6 @@ class ReduxExample extends Component {
       }
      
       submitBook(input){
-        alert('Submitted')
       }
     
 
